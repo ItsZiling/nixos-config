@@ -11,7 +11,7 @@
 	   enable = true; 
 	};
 	xwayland.enable = true; 
-	package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+	package = pkgs.hyprland;
 
 	settings = { 
 	"$terminal" = "kitty";
@@ -22,6 +22,7 @@
 
 	        "$mainMod, Q, exec, $terminal"
 		"$mainMod, B, exec, $browser"
+		"$mainMod, C, killactive"
 
 		];
 

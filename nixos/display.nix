@@ -4,18 +4,23 @@
 
 programs.hyprland = {
 	enable = true; 
-	portalPackage  = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-
-
 	};
 
 services = { 
  xserver = { 
-   enable = true;
+   enable = false;
    xkb.layout = "us"; 
   };
+
+ greetd = { 
+   enable = true; 
+   vt = 2; 
+   settings = { 
+     default_session = { 
+         user = "chen"; 
+	 command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+	 };
+	};
+     };
  };
-
-
-
 }
