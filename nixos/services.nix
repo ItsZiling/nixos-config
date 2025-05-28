@@ -1,18 +1,26 @@
-{pkgs, ...}:
+{inputs, pkgs, ... }: 
 
 {
 
+programs.hyprland = {
+	enable = true; 
+	};
 
-services = {
-    flatpak.enable = true; # Enable Flatpak
+services = { 
+ xserver = { 
+   enable = false;
+   xkb.layout = "us"; 
   };
 
-  
-  systemd.services.flatpak-repo = {
-    wantedBy = ["multi-user.target"];
-    path = [pkgs.flatpak];
-    script = ''
-      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    '';
-  };
+ greetd = { 
+   enable = true; 
+   vt = 2; 
+   settings = { 
+     default_session = { 
+         user = "chen"; 
+	 command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+	 };
+	};
+     };
+ };
 }

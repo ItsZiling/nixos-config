@@ -14,6 +14,8 @@
   home-manager = { 
      extraSpecialArgs = { inherit inputs; };
      users.chen = import inputs.self.outputs.home.default;
-	};
+     };
+
+  programs.fish.enable = true;
 
 }     
