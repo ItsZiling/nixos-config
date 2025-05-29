@@ -2,6 +2,12 @@
 
 {
 
+xdg = { 
+    portal = {
+        extraPortals = [pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland];
+        configPackages = [pkgs.hyprland];
+	};
+};
 
 services = {
     flatpak.enable = true; # Enable Flatpak

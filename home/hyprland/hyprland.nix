@@ -16,6 +16,13 @@
 	   "$terminal" = "kitty";
 	   "$browser" = "firefox";
 
+
+	   exec-once = [
+        	"dbus-update-activation-environment --all --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+        	"systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+		];
+
+
 	    bind = [ 
 	        "$mainMod, RETURN, exec, $terminal"
 		"$mainMod, B, exec, $browser"
@@ -70,6 +77,15 @@
 		",XF86MonBrightnessUp, exec, brightnessctl -e4 -n2 set 5%+"
 		",XF86MonBrightnessDown, exec, brightnessctl -e4 -n2 set 5%-"
 		];
+
+	    env = [
+        	"NIXOS_OZONE_WL, 1"
+        	"NIXPKGS_ALLOW_UNFREE, 1"
+        	"XDG_CURRENT_DESKTOP, Hyprland"
+        	"XDG_SESSION_TYPE, wayland"
+        	"XDG_SESSION_DESKTOP, Hyprland"
+		];
+
 	};
    }; 
 }

@@ -19,9 +19,13 @@ imports = [
   home.homeDirectory = "/home/chen";
 
 
-  xdg = { 
+ xdg = {
+
+    enable = true;
+    mime.enable = true;
+
     portal = {
-        extraPortals = [pkgs.xdg-desktop-portal-hyprland];
+        extraPortals = [pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland];
         configPackages = [pkgs.hyprland];
 	};
 
