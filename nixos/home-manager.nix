@@ -14,6 +14,7 @@
   home-manager = { 
      extraSpecialArgs = { inherit inputs; };
      users.chen = import inputs.self.outputs.home.default;
+     backupFileExtension = "home-backup";
      };
 
   programs.fish.enable = true;
