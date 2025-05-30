@@ -12,10 +12,6 @@ services = {
    xkb.layout = "us"; 
   };
 
- upower = { 
-   enable = true; 
-   };
-
  greetd = { 
    enable = true; 
    vt = 2; 
