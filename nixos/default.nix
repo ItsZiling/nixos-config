@@ -1,3 +1,5 @@
+{inputs, ... }: 
+
 {
 imports = [
 
@@ -7,6 +9,7 @@ imports = [
 ./net.nix
 ./services.nix
 ./stylix.nix
+inputs.stylix.nixosModules.stylix
 ];
 
 
