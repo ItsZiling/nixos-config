@@ -6,6 +6,7 @@ imports = [
 ./boot-loader.nix
 ./net.nix
 ./services.nix
+./stylix.nix
 ];
 
 
