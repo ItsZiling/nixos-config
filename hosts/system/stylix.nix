@@ -2,6 +2,11 @@
 
 {
 
+
+	imports = { 
+		inputs.stylix.nixosModules.stylix
+	}
+
 	stylix = { 
 	  enable = true;
 	  image = ./../home/hyprland/wallpapers/night.png;

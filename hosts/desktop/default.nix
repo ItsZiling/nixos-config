@@ -8,9 +8,10 @@
   imports =
     [ 
       ./hardware-configuration.nix
-    ];
+      ./../system
+      ];
 
-  networking.hostName = "nixos-btw"; # Define your hostname.
+  networking.hostName = "nixos-desktop"; # Define your hostname.
 
 
   # Set your time zone.
@@ -45,6 +46,15 @@
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [];
+
+
+  programs = { 
+  	fish.enable = true;
+  };
+
+  # Home Manager
+  
+
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

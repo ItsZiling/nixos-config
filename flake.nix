@@ -24,12 +24,11 @@
 
   outputs = { self, nixpkgs, ...} @inputs: { 
   nixosConfigurations = { 
-   nixos-btw = nixpkgs.lib.nixosSystem { 
+   nixos-desktop = nixpkgs.lib.nixosSystem { 
     system = "x86_64-linux";
     specialArgs = { inherit inputs; };
     modules = [
-        ./hosts/personal 
-	./nixos
+        ./hosts/desktop
 	]; 
       };
    };
