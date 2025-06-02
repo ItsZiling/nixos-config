@@ -32,7 +32,7 @@
 	]; 
       };
    };
-  
+  nixos.default = ./nixos;
   home.default = ./home; # for importing into configuration 
 
 

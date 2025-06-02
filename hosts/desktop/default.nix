@@ -8,7 +8,7 @@
   imports =
     [ 
       ./hardware-configuration.nix
-      ../../system
+      inputs.self.outputs.nixos.default
       ];
 
   networking.hostName = "nixos-desktop"; # Define your hostname.
