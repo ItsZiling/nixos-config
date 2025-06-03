@@ -37,5 +37,6 @@
 
 
    # TODO for the future create a homeConfigurations for standalone builds
+   # build the configuration with stylix as a home manager module in case we want to use stylix with it.
 };
 }
