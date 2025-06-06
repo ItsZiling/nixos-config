@@ -21,9 +21,11 @@
       "$terminal" = "kitty";
       "$browser" = "firefox";
       "$fileManager" = "$terminal -e yazi";
+      "$menu" = "rofi --show drun"
+      
 
       exec-once = [
-        
+        "waybar"
       ];
 
       general = {
@@ -93,7 +95,7 @@
         "$mainMod, B, exec, $browser"
         "$mainMod, C, killactive"
         "$mainMod, M, exit"
-	"$mainMod, E, exec, $fileManager"
+        "$mainMod, E, exec, $fileManager"
         "$mainMod, V, togglefloating"
         "$mainMod, R, exec, $menu"
         "$mainMod, P, pseudo"
@@ -152,6 +154,10 @@
         "XDG_SESSION_DESKTOP, Hyprland"
       ];
 
+      windowrulev2 = [
+        "suppressevent maximize, class:.*"
+        "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+      ];
     };
   };
 }
