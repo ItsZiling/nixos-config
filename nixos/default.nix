@@ -3,7 +3,7 @@
 {
 imports = [
 
-./flatpak.nix
+#./flatpak.nix
 ./home-manager.nix
 ./boot-loader.nix
 ./net.nix

@@ -9,6 +9,7 @@ imports = [
  ./git
  ./firefox
  ./yazi
+ ./vscode
 ];
 
 
@@ -43,7 +44,13 @@ imports = [
 	};
   };
 
+ nixpkgs = { 
+    config = {
+       allowUnfree = true; 
+       allowUnfreePredicate = (pkgs: true); 
+       }; 
 
+};
 
 
   # This value determines the Home Manager release that your configuration is
