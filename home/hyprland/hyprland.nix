@@ -20,10 +20,10 @@
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
       "$browser" = "firefox";
+      "$fileManager" = "$terminal -e yazi";
 
       exec-once = [
-        "dbus-update-activation-environment --all --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+        
       ];
 
       general = {
@@ -93,6 +93,7 @@
         "$mainMod, B, exec, $browser"
         "$mainMod, C, killactive"
         "$mainMod, M, exit"
+	"$mainMod, E, exec, $fileManager"
         "$mainMod, V, togglefloating"
         "$mainMod, R, exec, $menu"
         "$mainMod, P, pseudo"
