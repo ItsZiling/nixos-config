@@ -45,7 +45,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile.
-  environment.systemPackages = with pkgs; [];
+  environment.systemPackages = with pkgs; [nixfmt-rfc-style];
 
 
   programs = { 

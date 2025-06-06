@@ -19,7 +19,6 @@ imports = [
   home.username = "chen";
   home.homeDirectory = "/home/chen";
 
-
  xdg = {
 
     enable = true;
@@ -61,7 +60,7 @@ imports = [
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
-  home.packages = with pkgs; [];
+  home.packages = with pkgs; [nixfmt-rfc-style];
   home.file = {};
   
   home.sessionVariables = {};
