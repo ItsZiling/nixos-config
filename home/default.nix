@@ -2,24 +2,22 @@
 
 {
 
-imports = [ 
- ./hyprland
- ./kitty
- ./nvim
- ./git
- ./firefox
- ./yazi
- ./vscode
-];
-
-
+  imports = [
+    ./hyprland
+    ./kitty
+    ./nvim
+    ./git
+    ./firefox
+    ./yazi
+    ./vscode
+  ];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "chen";
   home.homeDirectory = "/home/chen";
 
- xdg = {
+  xdg = {
 
     enable = true;
     mime.enable = true;
@@ -28,29 +26,31 @@ imports = [
     };
 
     portal = {
-        extraPortals = [pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland];
-        configPackages = [pkgs.hyprland];
-	};
+      extraPortals = [
+        pkgs.xdg-desktop-portal-gtk
+        pkgs.xdg-desktop-portal-hyprland
+      ];
+      configPackages = [ pkgs.hyprland ];
+    };
 
     userDirs = {
-    	enable = true;
-	desktop = "$HOME/Desktop";
-	documents = "$HOME/Documents";
-	download = "$HOME/Downloads";
-	pictures = "$HOME/Pictures";
-	music = "$HOME/Music";
-	videos = "$HOME/Videos";
-	};
+      enable = true;
+      desktop = "$HOME/Desktop";
+      documents = "$HOME/Documents";
+      download = "$HOME/Downloads";
+      pictures = "$HOME/Pictures";
+      music = "$HOME/Music";
+      videos = "$HOME/Videos";
+    };
   };
 
- nixpkgs = { 
+  nixpkgs = {
     config = {
-       allowUnfree = true; 
-       allowUnfreePredicate = (pkgs: true); 
-       }; 
+      allowUnfree = true;
+      allowUnfreePredicate = (pkgs: true);
+    };
 
-};
-
+  };
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -60,10 +60,10 @@ imports = [
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
-  home.packages = with pkgs; [nixfmt-rfc-style];
-  home.file = {};
-  
-  home.sessionVariables = {};
+  home.packages = with pkgs; [ ];
+  home.file = { };
+
+  home.sessionVariables = { };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

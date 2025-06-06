@@ -1,31 +1,30 @@
-{inputs, pkgs, ... }: 
+{ inputs, pkgs, ... }:
 
 {
-
-programs.hyprland = {
-	enable = true; 
-	};
-
-services = { 
- xserver = { 
-   enable = false;
-   xkb.layout = "us"; 
+  programs.hyprland = {
+    enable = true;
   };
 
- greetd = { 
-   enable = true; 
-   vt = 2; 
-   settings = { 
-     default_session = { 
-         user = "chen"; 
-	 command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
-	 };
-	};
-     };
-
- pipewire = {
-    enable = true;
-    pulse.enable = true;
+  services = {
+    xserver = {
+      enable = false;
+      xkb.layout = "us";
     };
- };
+
+    greetd = {
+      enable = true;
+      vt = 2;
+      settings = {
+        default_session = {
+          user = "chen";
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+        };
+      };
+    };
+
+    pipewire = {
+      enable = true;
+      pulse.enable = true;
+    };
+  };
 }

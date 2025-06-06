@@ -1,10 +1,7 @@
-{ 
-
-programs.git = { 
-   enable = true; 
-   userName = "ziling"; 
-   userEmail = "jasonchen7766@gmail.com";
- };
-
-
+{
+  programs.git = {
+    enable = true;
+    userName = "ziling";
+    userEmail = "jasonchen7766@gmail.com";
+  };
 }

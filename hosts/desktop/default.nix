@@ -2,17 +2,20 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{inputs, config, pkgs, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [ 
-      ./hardware-configuration.nix
-      inputs.self.outputs.nixos.default
-      ];
+  imports = [
+    ./hardware-configuration.nix
+    inputs.self.outputs.nixos.default
+  ];
 
   networking.hostName = "nixos-desktop"; # Define your hostname.
-
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -32,29 +35,28 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-
   # Define user
   users.users.chen = {
     isNormalUser = true;
     shell = pkgs.fish;
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile.
-  environment.systemPackages = with pkgs; [nixfmt-rfc-style];
+  environment.systemPackages = with pkgs; [ nixfmt-rfc-style ];
 
-
-  programs = { 
-  	fish.enable = true;
+  programs = {
+    fish.enable = true;
   };
 
   # Home Manager
-  
-
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
@@ -63,7 +65,10 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
-  
+
   # enables flake
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 }

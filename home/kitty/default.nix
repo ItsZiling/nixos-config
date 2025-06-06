@@ -1,7 +1,6 @@
 {
-
-programs.kitty = { 
-       enable = true;
-       shellIntegration.enableFishIntegration = true;
+  programs.kitty = {
+    enable = true;
+    shellIntegration.enableFishIntegration = true;
   };
 }
