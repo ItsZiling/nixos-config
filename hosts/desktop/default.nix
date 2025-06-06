@@ -38,7 +38,7 @@
   # Define user
   users.users.chen = {
     isNormalUser = true;
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
     extraGroups = [
       "networkmanager"
       "wheel"
@@ -53,7 +53,7 @@
   environment.systemPackages = with pkgs; [ nixfmt-rfc-style ];
 
   programs = {
-    fish.enable = true;
+    zsh.enable = true;
   };
 
   # Home Manager
