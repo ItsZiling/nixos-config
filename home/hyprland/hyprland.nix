@@ -21,7 +21,7 @@
       "$terminal" = "kitty";
       "$browser" = "firefox";
       "$fileManager" = "$terminal -e yazi";
-      "$menu" = "rofi --show drun"
+      "$menu" = "rofi -show drun";
       
 
       exec-once = [

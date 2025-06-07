@@ -5,7 +5,7 @@
     enable = true;
 
     profiles.chen = {
-      extensions =
+      extensions.packages =
         with inputs.nur.legacyPackages.${pkgs.stdenv.hostPlatform.system}.repos.rycee.firefox-addons; [
           darkreader
           ublock-origin
