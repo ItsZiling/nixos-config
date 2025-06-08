@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
@@ -7,5 +7,12 @@
     ./net.nix
     ./services.nix
     ./stylix.nix
+  ];
+
+  environment.systemPackages = with pkgs; [
+    nixfmt-rfc-style
+    wget
+    zip
+    unzip
   ];
 }

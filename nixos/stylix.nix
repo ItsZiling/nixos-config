@@ -33,9 +33,20 @@
         name = "JetBrains Mono";
       };
 
-      serif = config.stylix.fonts.monospace;
-      sansSerif = config.stylix.fonts.monospace;
-      emoji = config.stylix.fonts.monospace;
+      serif = { 
+        package = pkgs.montserrat;
+        name = "Montserrat";
+      };
+      
+      sansSerif = {
+        package = pkgs.montserrat;
+        name = "Montserrat";
+      };
+
+
+      # serif = config.stylix.fonts.monospace;
+      # sansSerif = config.stylix.fonts.monospace;
+      # emoji = config.stylix.fonts.monospace;
     };
   };
 }
