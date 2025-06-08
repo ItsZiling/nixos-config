@@ -6,6 +6,7 @@
       vscode.enable = false;
       waybar.enable = false;
       firefox.enable = false;
+      wofi.enable = false;
     };
   };
 }

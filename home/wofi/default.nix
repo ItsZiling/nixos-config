@@ -1,7 +1,10 @@
-
+{
+  lib,
+  ...
+}:
 
 {
-  programs.waybar = { 
+  programs.wofi = {
     enable = true;
     style = ./style.css;
   };
