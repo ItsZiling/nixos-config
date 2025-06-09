@@ -12,10 +12,15 @@
 {
   imports = [
     ./hardware-configuration.nix
-    inputs.self.outputs.nixos.default
+    ./../system/system.nix 
+    ./../system/home-manager.nix
   ];
 
   networking.hostName = "nixos-desktop"; # Define your hostname.
+
+  # bootloader
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -52,11 +57,8 @@
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [ ];
 
-  programs = {
-    zsh.enable = true;
-  };
-
-  # Home Manager
+  # network 
+  networking.networkmanager.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

@@ -34,7 +34,6 @@
           ];
         };
       };
-      nixos.default = ./nixos;
       home.default = ./home; # for importing into configuration
 
       # TODO for the future create a homeConfigurations for standalone builds

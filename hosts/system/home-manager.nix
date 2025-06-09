@@ -1,5 +1,3 @@
-# TODO create an option to disable this module in case we want to use home manager as standalone
-
 { inputs, pkgs, ... }:
 
 {
