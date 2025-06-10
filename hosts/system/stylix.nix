@@ -12,7 +12,7 @@
 
   stylix = {
     enable = true;
-    image = ./../../home/hyprland/wallpapers/land.png;
+    image = ./../../wallpapers/land.png;
     polarity = "dark";
     cursor = {
       package = pkgs.bibata-cursors;

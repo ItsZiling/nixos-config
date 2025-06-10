@@ -7,6 +7,11 @@
 }:
 
 {
+
+  home.packages = with pkgs; [
+    hyprshot
+  ];
+
   wayland.windowManager.hyprland = {
 
     enable = true;
@@ -22,7 +27,6 @@
       "$browser" = "firefox";
       "$fileManager" = "$terminal -e yazi";
       "$menu" = "wofi --show drun";
-      
 
       exec-once = [
         "waybar"
@@ -101,6 +105,14 @@
         "$mainMod, P, pseudo"
         "$mainMod, J, togglesplit"
 
+        # Hyprshot keybinds
+        "$mainMod, PRINT, exec, hyprshot -m window"
+        ", PRINT, exec, hyprshot -m output"
+        "SUPER_SHIFT, PRINT, exec, hyprshot -m region"
+
+        # Hyprlock
+        "$mainMod, L, exec, hyprlock"
+
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"
         "$mainMod, up, movefocus, u"
@@ -147,6 +159,7 @@
       ];
 
       env = [
+        "HYPRSHOT_DIR, Pictures/Screenshots"
         "NIXOS_OZONE_WL, 1"
         "NIXPKGS_ALLOW_UNFREE, 1"
         "XDG_CURRENT_DESKTOP, Hyprland"

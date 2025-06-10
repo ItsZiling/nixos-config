@@ -14,6 +14,7 @@
     ./hardware-configuration.nix
     ./../system/system.nix 
     ./../system/home-manager.nix
+    ./../system/drivers/amdgpu.nix
   ];
 
   networking.hostName = "nixos-desktop"; # Define your hostname.

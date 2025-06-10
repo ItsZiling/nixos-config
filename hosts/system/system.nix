@@ -1,7 +1,7 @@
 { inputs, pkgs, ... }:
 
 {
-  imports = [ 
+  imports = [
     ./stylix.nix
   ];
   # clean system
@@ -22,12 +22,27 @@
     unzip
   ];
 
-  # stuff to be enable across all hosts
+  fonts = {
+    packages = with pkgs; [
+      noto-fonts-emoji
+      noto-fonts-cjk-sans
+      font-awesome
+    ];
+  };
+
+  # Allows hyprlock to work and some system privileges
+  security = {
+    polkit.enable = true;
+    pam.services.hyprlock = { };
+  };
+
+  # programs to be enable across all hosts
   programs = {
     zsh.enable = true;
     hyprland.enable = true;
   };
 
+  # Services to be enabled
   services = {
     xserver = {
       enable = false;
