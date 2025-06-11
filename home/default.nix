@@ -3,7 +3,7 @@
 {
 
   imports = [
-    ./hyprland
+    ./hypr
     ./kitty
     ./nvim
     ./git

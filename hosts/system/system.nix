@@ -42,8 +42,15 @@
     hyprland.enable = true;
   };
 
+  hardware = { 
+    bluetooth.enable = true; 
+    bluetooth.powerOnBoot = true;
+  };
+
   # Services to be enabled
   services = {
+    upower.enable = true;
+    
     xserver = {
       enable = false;
       xkb.layout = "us";
@@ -63,6 +70,7 @@
     pipewire = {
       enable = true;
       pulse.enable = true;
+      wireplumber.enable = true;
     };
   };
 }
