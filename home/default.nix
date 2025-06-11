@@ -38,7 +38,18 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
-  home.packages = with pkgs; [ ];
+  home.packages = with pkgs; [
+    bluez
+    bluez-tools
+    libgtop
+    dart-sass
+    wl-clipboard
+    gvfs
+    gtksourceview3
+    libchamplain_libsoup3
+    brightnessctl
+    pavucontrol
+  ];
   home.file = { };
 
   home.sessionVariables = { };
