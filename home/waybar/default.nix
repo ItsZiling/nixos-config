@@ -32,7 +32,7 @@
 
         "custom/notification" = {
           tooltip = false;
-          format = " {icon}  ";
+          format = "{icon}  ";
           format-icons = {
             notification = "󱅫";
             none = "󰂚";
