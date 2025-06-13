@@ -1,7 +1,8 @@
 #waybar {
     font-family: "JetBrains Mono", "Font Awesome 6 Free Solid", "Font Awesome 6 Brands Regular";
-    font-size: 16px;
+    font-size: 14px;
 }
+
 
 #window {
     padding: 0 10px;
@@ -49,7 +50,6 @@ window#waybar {
     color: #bb9af7;
 }
 
-/* Repeat style here to ensure properties are overwritten as there's no !important and button:hover above resets the colour */
 
 #workspaces button.focused {
     color: #7aa2f7;
@@ -59,7 +59,7 @@ window#waybar {
 }
 
 #pulseaudio {
-    /* font-size: 26px; */
+    
 }
 
 #custom-recorder {
@@ -88,13 +88,9 @@ window#waybar {
 #custom-media {
     margin: 0px 0px 0px 10px;
     padding: 0 5px;
-    /* border-top: 3px solid rgba(217, 216, 216, 0.5); */
+
 }
 
-/* #clock {
-    margin:     0px 16px 0px 10px;
-    min-width:  140px;
-} */
 
 #battery.warning {
     color: rgba(255, 210, 4, 1);

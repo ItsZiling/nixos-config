@@ -52,6 +52,11 @@
   # Services to be enabled
   services = {
     upower.enable = true;
+    blueman.enable = true;
+    
+    printing = { 
+      enable = true; 
+    };
     
     xserver = {
       enable = false;

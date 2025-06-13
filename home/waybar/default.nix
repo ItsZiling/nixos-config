@@ -10,7 +10,7 @@
 
         modules-left = [
           "hyprland/workspaces"
-          "hyprland/mode"
+          "hyprland/submap"
           "hyprland/window"
         ];
 
@@ -22,15 +22,36 @@
           "custom/recorder"
           "tray"
           "pulseaudio"
-          "backlight"
           "temperature"
           "cpu"
           "memory"
           "battery"
           "network"
+          "custom/notification"
         ];
 
-        "hyprland/mode" = {
+        "custom/notification" = {
+          tooltip = false;
+          format = "{icon} {} ";
+          format-icons = {
+            notification = "󱅫";
+            none = "󰂚";
+            dnd-notification = "󰵙";
+            dnd-none = "󰂛";
+            inhibited-notification = "󱅫";
+            inhibited-none = "󰂚";
+            dnd-inhibited-notification = "󰵙";
+            dnd-inhibited-none = "󰂛";
+          };
+          return-type = "json";
+          exec = "swaync-client -swb";
+          exec-if = "which swaync-client";
+          on-click = "swaync-client -t -sw";
+          on-click-right = "swaync-client -d -sw";
+          escape = true;
+        };
+
+        "hyprland/submap" = {
           format = " {}";
         };
 
@@ -143,18 +164,6 @@
           scroll-step = 2;
           on-click = "pavucontrol";
           tooltip = false;
-        };
-
-        backlight = {
-          format = "{icon} {percent}%";
-          format-alt = "{icon}";
-          format-alt-click = "click-left";
-          format-icons = [
-            ""
-            ""
-          ];
-          on-scroll-up = "light -A 1";
-          on-scroll-down = "light -U 1";
         };
 
         temperature = {

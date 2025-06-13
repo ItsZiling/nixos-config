@@ -30,6 +30,7 @@
 
       exec-once = [
         "waybar"
+        "swaync"
       ];
 
       general = {
@@ -104,6 +105,7 @@
         "$mainMod, R, exec, $menu"
         "$mainMod, P, pseudo"
         "$mainMod, J, togglesplit"
+        "$mainMod, n, exec, swaync-client -t -sw"
 
         # Hyprshot keybinds
         "$mainMod, PRINT, exec, hyprshot -m window"

@@ -6,6 +6,6 @@
 {
   programs.wofi = {
     enable = true;
-    style = ./style.css;
+    # style = ./style.css;
   };
 }
