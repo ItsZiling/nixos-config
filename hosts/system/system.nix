@@ -44,8 +44,8 @@
     hyprland.enable = true;
   };
 
-  hardware = { 
-    bluetooth.enable = true; 
+  hardware = {
+    bluetooth.enable = true;
     bluetooth.powerOnBoot = true;
   };
 
@@ -53,11 +53,11 @@
   services = {
     upower.enable = true;
     blueman.enable = true;
-    
-    printing = { 
-      enable = true; 
+
+    printing = {
+      enable = true;
     };
-    
+
     xserver = {
       enable = false;
       xkb.layout = "us";
@@ -78,6 +78,17 @@
       enable = true;
       pulse.enable = true;
       wireplumber.enable = true;
+    };
+  };
+
+  xdg = {
+    portal = {
+      enable = true;
+      extraPortals = [
+        pkgs.xdg-desktop-portal-gtk
+        pkgs.xdg-desktop-portal-hyprland
+      ];
+      configPackages = [ pkgs.hyprland ];
     };
   };
 }

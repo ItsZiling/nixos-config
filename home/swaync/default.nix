@@ -14,7 +14,7 @@
       control-center-margin-top = 10;
       control-center-margin-bottom = 10;
       controlcenter-margin-left = 10;
-      control-center-height = 500;
+      control-center-height = 600;
       control-center-width = 450;
       fit-to-screen = false;
       keyboard-shortcuts = true;
@@ -51,7 +51,7 @@
         };
 
         mpris = {
-          image-size = 100;
+          image-size = 50;
         };
 
         dnd = {
