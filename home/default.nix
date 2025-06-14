@@ -4,14 +4,8 @@
 
   imports = [
     ./tui
-    ./hypr
-    ./nvim
-    ./stylix
-    ./waybar
-    ./wofi
-    ./xdg
-    ./swaync
-    ./features
+    ./core
+    ./programs
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

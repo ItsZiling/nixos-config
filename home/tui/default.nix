@@ -4,5 +4,6 @@
     ./kitty.nix
     ./zsh.nix
     ./yazi.nix
+    ./neovim.nix
   ];
 }
