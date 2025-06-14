@@ -106,6 +106,7 @@
         "$mainMod, P, pseudo"
         "$mainMod, J, togglesplit"
         "$mainMod, n, exec, swaync-client -t -sw"
+        "$mainMod, F, FULLSCREEN"
 
         # Hyprshot keybinds
         "$mainMod, PRINT, exec, hyprshot -m window"

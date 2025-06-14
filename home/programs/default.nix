@@ -21,5 +21,8 @@
     pavucontrol
     playerctl
     spotify
+
+    jdk
+    prismlauncher
   ];
 }
