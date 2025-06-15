@@ -56,6 +56,17 @@
 
     printing = {
       enable = true;
+      drivers = with pkgs; [
+        gutenprint
+        canon-cups-ufr2
+        cnijfilter2
+        cups-filters
+      ];
+    };
+
+    avahi = {
+      enable = true;
+      nssmdns = true;
     };
 
     xserver = {
