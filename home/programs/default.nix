@@ -22,8 +22,9 @@
     playerctl
     spotify
 
-    jdk
     prismlauncher
     microsoft-edge
+
+    jdk
   ];
 }
