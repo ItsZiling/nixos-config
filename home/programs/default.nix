@@ -24,5 +24,6 @@
 
     jdk
     prismlauncher
+    microsoft-edge
   ];
 }
