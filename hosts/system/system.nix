@@ -88,7 +88,10 @@
     pipewire = {
       enable = true;
       pulse.enable = true;
+      alsa.enable = true; 
+      alsa.support32Bit = true;
       wireplumber.enable = true;
+      jack.enable = true;
     };
   };
 
