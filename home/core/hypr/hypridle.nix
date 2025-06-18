@@ -19,11 +19,11 @@
           on-resume = "brightnessctl -rd rgb:kbd_backlight";
         }
         {
-          timeout = 80; 
+          timeout = 180; 
           on-timeout = "hyprlock";
         }
         { 
-          timeout = 120; 
+          timeout = 300; 
           on-timeout = "hyprctl dispatch dpms off"; 
           on-resume = "hyprctl dispatch dpms on";
         }
