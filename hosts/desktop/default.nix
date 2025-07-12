@@ -12,13 +12,19 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./../system/system.nix 
-    ./../system/home-manager.nix
-    ./../system/drivers/amdgpu.nix
-    ./../system/steam.nix
+    ./../core.nix
+    ./../home-manager.nix
+    ./../steam.nix
   ];
 
   networking.hostName = "nixos-desktop"; # Define your hostname.
+
+  # amd gpu driver
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+  services.xserver.videoDrivers = [ "amdgpu" ];
 
   # bootloader
   boot.loader.systemd-boot.enable = true;
@@ -59,7 +65,7 @@
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [ ];
 
-  # network 
+  # network
   networking.networkmanager.enable = true;
 
   # This value determines the NixOS release from which the default

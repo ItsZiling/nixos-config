@@ -30,7 +30,7 @@
       base0E = "#BB9AF7";
       base0F = "#BB9AF7";
     };
-    image = ./../../wallpapers/land.png;
+    image = ./../wallpapers/land.png;
     polarity = "dark";
     cursor = {
       package = pkgs.bibata-cursors;
