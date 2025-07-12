@@ -11,9 +11,9 @@
 
 {
   imports = [
+    inputs.home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ./../core.nix
-    ./../home-manager.nix
     ./../steam.nix
   ];
 
@@ -25,6 +25,13 @@
     enable32Bit = true;
   };
   services.xserver.videoDrivers = [ "amdgpu" ];
+
+  # Home Manager
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users.chen = import inputs.self.outputs.home.default;
+    backupFileExtension = "home-backup";
+  };
 
   # bootloader
   boot.loader.systemd-boot.enable = true;
