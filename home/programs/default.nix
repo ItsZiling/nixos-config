@@ -21,6 +21,7 @@
     pavucontrol
     playerctl
     spotify
+    ani-cli
 
     prismlauncher
     microsoft-edge

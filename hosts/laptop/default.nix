@@ -11,20 +11,14 @@
 
 {
   imports = [
+    #TODO import the necessary hardware from github depending on the laptop
     inputs.home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ./../core.nix
     ./../steam.nix
   ];
 
-  networking.hostName = "nixos-desktop"; # Define your hostname.
-
-  # amd gpu driver
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };
-  services.xserver.videoDrivers = [ "amdgpu" ];
+  networking.hostName = "nixos-laptop"; # Define your hostname.
 
   # Home Manager
   home-manager = {

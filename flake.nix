@@ -19,6 +19,8 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+     hardware.url = "github:nixos/nixos-hardware";
   };
 
   outputs =
