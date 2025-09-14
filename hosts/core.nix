@@ -66,7 +66,7 @@
 
     avahi = {
       enable = true;
-      nssmdns = true;
+      nssmdns4 = true;
     };
 
     xserver = {
@@ -76,11 +76,10 @@
 
     greetd = {
       enable = true;
-      vt = 2;
       settings = {
         default_session = {
           user = "chen";
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+          command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd Hyprland";
         };
       };
     };
