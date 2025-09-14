@@ -32,7 +32,16 @@
             ./hosts/desktop
           ];
         };
+
+        nixos-laptop = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/laptop
+          ];
+        };
       };
+      
       home.default = ./home; # for importing into configuration
 
       # TODO for the future create a homeConfigurations for standalone builds
