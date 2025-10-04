@@ -55,7 +55,7 @@
           format = " {}";
         };
 
-        "sway/workspaces" = {
+        "hyprland/workspaces" = {
           disable-scroll = true;
           all-outputs = false;
           disable-markup = false;
