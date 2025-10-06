@@ -20,6 +20,7 @@
     wget
     zip
     unzip
+    xrandr
   ];
 
   fonts = {

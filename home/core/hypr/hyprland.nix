@@ -27,28 +27,15 @@
       "$browser" = "firefox";
       "$fileManager" = "$terminal -e yazi";
       "$menu" = "wofi --show drun";
-      exec = ["hyprctl dispatch submap global"];
 
-      submap = "global";
-
-      #Caelestia Shell
-      bindi = [
-        "$mainMod, Super_L, global, caelestia:launcher"
-      ];
-
-      bindin = [
-        "$mainMod, catchall, global, caelestia:launcherInterrupt"
-        "$mainMod, mouse:272, global, caelestia:launcherInterrupt"
-        "$mainMod, mouse:273, global, caelestia:launcherInterrupt"
-        "$mainMod, mouse:274, global, caelestia:launcherInterrupt"
-        "$mainMod, mouse:275, global, caelestia:launcherInterrupt"
-        "$mainMod, mouse:276, global, caelestia:launcherInterrupt"
-        "$mainMod, mouse:277, global, caelestia:launcherInterrupt"
-        "$mainMod, mouse_up, global, caelestia:launcherInterrupt"
-        "$mainMod, mouse_down, global, caelestia:launcherInterrupt"
+      monitor = [
+        ", 1920x1080@60, 0x0, 1"
       ];
 
       bind = [
+         #Caelestia Shell
+        "$mainMod, SUPER_L, exec, caelestia shell drawers toggle launcher"
+
         "$mainMod, RETURN, exec, $terminal"
         "$mainMod, B, exec, $browser"
         "$mainMod, C, killactive"
