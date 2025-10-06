@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./stylix.nix
+    #./stylix.nix
   ];
   # clean system
   nix = {

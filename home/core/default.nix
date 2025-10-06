@@ -1,10 +1,11 @@
 { 
   imports = [
     ./hypr
-    ./waybar
-    ./stylix.nix
-    ./swaync.nix
+    #./waybar
+    #./stylix.nix
+    #./swaync.nix
     ./xdg.nix
-    ./wofi.nix
+    ./caelestia.nix
+    #./wofi.nix
   ];
 }

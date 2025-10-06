@@ -22,7 +22,7 @@
     package = pkgs.hyprland;
 
     settings = {
-      "$mainMod" = "CTRL";
+      "$mainMod" = "SUPER";
       "$terminal" = "kitty";
       "$browser" = "firefox";
       "$fileManager" = "$terminal -e yazi";
@@ -98,7 +98,7 @@
       bind = [
         "$mainMod, RETURN, exec, $terminal"
         "$mainMod, B, exec, $browser"
-        "$mainMod, q, killactive"
+        "$mainMod, C, killactive"
         "$mainMod, M, exit"
         "$mainMod, E, exec, $fileManager"
         "$mainMod, V, togglefloating"
@@ -109,7 +109,7 @@
         "$mainMod, F, FULLSCREEN"
 
         # Hyprshot keybinds
-        "$mainMod, PRINT, exec, hyprshot -m window"
+        "CTRL, PRINT, exec, hyprshot -m window"
         ", PRINT, exec, hyprshot -m output"
         "CTRL_SHIFT, PRINT, exec, hyprshot -m region"
 
