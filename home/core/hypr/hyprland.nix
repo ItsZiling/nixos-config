@@ -53,7 +53,7 @@
         "CTRL_SHIFT, PRINT, exec, hyprshot -m region"
 
         # Hyprlock
-        "$mainMod, L, exec, hyprlock"
+        "$mainMod, L, exec, caelestia shell lock lock"
 
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"
@@ -104,8 +104,8 @@
         gaps_in = 5;
         gaps_out = 20;
         border_size = 2;
-        #"col.active_border" = "rgb(8fbcbb)";
-        #"col.inactive_border" = "rgb(3b4252)";
+        "col.active_border" = "rgb(8fbcbb)";
+        "col.inactive_border" = "rgb(3b4252)";
         resize_on_border = true;
         allow_tearing = false;
         layout = "dwindle";
