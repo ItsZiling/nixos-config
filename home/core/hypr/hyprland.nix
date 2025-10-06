@@ -33,8 +33,9 @@
       ];
 
       bind = [
-         #Caelestia Shell
+        # Caelestia Shell
         "$mainMod, SUPERn_L, exec, caelestia shell drawers toggle launcher"
+        "$mainMod, L, exec, caelestia shell lock lock"
 
         "$mainMod, RETURN, exec, $terminal"
         "$mainMod, B, exec, $browser"
@@ -51,9 +52,6 @@
         "CTRL, PRINT, exec, hyprshot -m window"
         ", PRINT, exec, hyprshot -m output"
         "CTRL_SHIFT, PRINT, exec, hyprshot -m region"
-
-        # Hyprlock
-        "$mainMod, L, exec, caelestia shell lock lock"
 
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"
