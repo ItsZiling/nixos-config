@@ -34,7 +34,7 @@
 
       bind = [
         # Caelestia Shell
-        "$mainMod, SUPERn_L, exec, caelestia shell drawers toggle launcher"
+        "$mainMod, SUPER_L, exec, caelestia shell drawers toggle launcher"
         "$mainMod, L, exec, caelestia shell lock lock"
 
         "$mainMod, RETURN, exec, $terminal"
