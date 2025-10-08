@@ -52,7 +52,7 @@
         # Hyprshot keybinds
         "CTRL, PRINT, exec, hyprshot -m window"
         ", PRINT, exec, hyprshot -zm region"
-        "CTRL+Alt, PRINT, exec, hyprshot -m output" # screenshot of active monitor
+        "CTRL+Alt, PRINT, exec, hyprshot -m output" # screenshot of an active monitor
 
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"
