@@ -10,6 +10,7 @@
 
   home.packages = with pkgs; [
     hyprshot
+    hyprpicker
   ];
 
   wayland.windowManager.hyprland = {
@@ -50,7 +51,7 @@
 
         # Hyprshot keybinds
         "CTRL, PRINT, exec, hyprshot -m window"
-        ", PRINT, exec, hyprshot -m region"
+        ", PRINT, exec, hyprshot -zm region"
         "CTRL_SHIFT, PRINT, exec, hyprshot -m output" # screenshot of active monitor
 
         "$mainMod, left, movefocus, l"
