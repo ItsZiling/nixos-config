@@ -42,7 +42,7 @@
         "$mainMod, C, killactive"
         "$mainMod, M, exit"
         "$mainMod, E, exec, $fileManager"
-        "$mainMod, V, togglefloating"
+        "$mainMod+Alt, space, togglefloating"
         "$mainMod, P, pseudo"
         "$mainMod, J, togglesplit"
         "$mainMod, N, exec, swaync-client -t -sw"
@@ -50,8 +50,8 @@
 
         # Hyprshot keybinds
         "CTRL, PRINT, exec, hyprshot -m window"
-        ", PRINT, exec, hyprshot -m output"
-        "CTRL_SHIFT, PRINT, exec, hyprshot -m region"
+        ", PRINT, exec, hyprshot -m region"
+        "CTRL_SHIFT, PRINT, exec, hyprshot -m output" # screenshot of active monitor
 
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"
