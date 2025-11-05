@@ -13,9 +13,8 @@
         height = 40;
 
         modules-left = [
-          "hyprland/workspaces"
-          "hyprland/submap"
-          "hyprland/window"
+          "wlr/workspaces"
+          "wlr/taskbar"
         ];
 
         modules-center = [
@@ -55,11 +54,7 @@
           escape = true;
         };
 
-        "hyprland/submap" = {
-          format = " {}";
-        };
-
-        "hyprland/workspaces" = {
+        "wlr/workspaces" = {
           disable-scroll = true;
           all-outputs = false;
           disable-markup = false;
@@ -83,7 +78,7 @@
           spacing = 8;
         };
 
-        "hyprland/window" = {
+        "wlr/taskbar" = {
           max-length = 60;
           tooltip = false;
           # "format": "( {} )"
