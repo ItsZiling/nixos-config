@@ -20,13 +20,6 @@
 
   networking.hostName = "nixos-laptop"; # Define your hostname.
 
-  # Home Manager
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users.chen = import inputs.self.outputs.home.default;
-    backupFileExtension = "home-backup";
-  };
-
   # bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

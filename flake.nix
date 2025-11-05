@@ -24,34 +24,52 @@
       url = "github:caelestia-dots/shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
-     hardware.url = "github:nixos/nixos-hardware";
+
+    hardware.url = "github:nixos/nixos-hardware";
   };
 
   outputs =
-    { self, nixpkgs, ... }@inputs:
     {
-      nixosConfigurations = {
-        nixos-desktop = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/desktop
-          ];
-        };
-
-        nixos-laptop = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/laptop
-          ];
-        };
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
+    {
+      nixosConfigurations.nixos-desktop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/desktop
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = { inherit inputs; };
+              users.chen = import ./home;
+              backupFileExtension = "backup";
+            };
+          }
+        ];
       };
-      
-      home.default = ./home; # for importing into configuration
 
-      # TODO for the future create a homeConfigurations for standalone builds
-      # build the configuration with stylix as a home manager module in case we want to use stylix with it.
+      nixosConfigurations.nixos-laptop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/laptop
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = { inherit inputs; };
+              users.chen = import ./home;
+              backupFileExtension = "backup";
+            };
+          }
+        ];
+      };
     };
 }
