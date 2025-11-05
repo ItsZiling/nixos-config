@@ -18,6 +18,14 @@
     ./../steam.nix
   ];
 
+  services.logind = {
+    lidSwitch = "suspend";
+    lidSwitchExternalPower = "lock";
+    lidSwitchDocked = "ignore";
+    powerKey = "suspend";
+    powerKeyLongPress = "poweroff";
+  };
+
   networking.hostName = "nixos-laptop"; # Define your hostname.
 
   # bootloader
