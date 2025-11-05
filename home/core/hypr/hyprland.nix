@@ -14,7 +14,6 @@
   ];
 
   wayland.windowManager.hyprland = {
-
     enable = true;
     systemd = {
       enable = true;
@@ -23,6 +22,11 @@
     package = pkgs.hyprland;
 
     settings = {
+
+      exec-once = [
+        "caelestia shell lock lock"
+      ]; 
+
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
       "$browser" = "firefox";

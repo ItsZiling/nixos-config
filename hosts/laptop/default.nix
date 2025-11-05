@@ -14,7 +14,7 @@
     #TODO import the necessary hardware from github depending on the laptop
     inputs.home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
-    ./../core.nix
+    ./../core
     ./../steam.nix
   ];
 

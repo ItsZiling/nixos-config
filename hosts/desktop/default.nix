@@ -13,7 +13,7 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
-    ./../core.nix
+    ./../core
     ./../steam.nix
   ];
 
