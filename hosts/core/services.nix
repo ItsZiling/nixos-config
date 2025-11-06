@@ -29,15 +29,16 @@
     xkb.layout = "us";
   };
 
-  services.greetd = {
-    enable = true;
-    settings.default_session = {
-      user = "chen";
-      # command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd Hyprland";
-      command = "Hyprland";
-    };
-  };
+  # services.greetd = {
+  #   enable = true;
+  #   settings.default_session = {
+  #     user = "chen";
+  #     # command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+  #     command = "Hyprland";
+  #   };
+  # };
 
+  services.xserver.displayManager.gdm.enable = true;
   # I need sounds
   services.pipewire = {
     enable = true;
