@@ -7,7 +7,7 @@
 
     envExtra = ''
       export EDITOR="nvim"
-      export TERMINAL="kitty"
+      export TERMINAL="wezterm"
     '';
 
     oh-my-zsh = { 

@@ -11,5 +11,6 @@
     font-awesome
     jetbrains-mono
     nerd-fonts.jetbrains-mono
+    maple-mono.NF
   ];
 }

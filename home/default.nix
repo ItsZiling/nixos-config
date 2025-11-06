@@ -23,8 +23,8 @@
   home.pointerCursor = {
     gtk.enable = true;
     package = pkgs.bibata-cursors;
-    name = "Bibata-Original-Ice";
-    size = 16;
+    name = "Bibata-Modern-Classic";
+    size = 24;
   };
 
   # This value determines the Home Manager release that your configuration is

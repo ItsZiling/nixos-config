@@ -28,7 +28,7 @@
       ]; 
 
       "$mainMod" = "SUPER";
-      "$terminal" = "kitty";
+      "$terminal" = "wezterm";
       "$browser" = "firefox";
       "$fileManager" = "$terminal -e yazi";
       "$menu" = "wofi --show drun";
