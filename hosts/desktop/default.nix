@@ -15,6 +15,7 @@
     ./hardware-configuration.nix
     ./../core
     ./../steam.nix
+    ./../stylix.nix
   ];
 
   networking.hostName = "nixos-desktop"; # Define your hostname.
@@ -25,13 +26,6 @@
     enable32Bit = true;
   };
   services.xserver.videoDrivers = [ "amdgpu" ];
-
-  # Home Manager
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users.chen = import inputs.self.outputs.home.default;
-    backupFileExtension = "home-backup";
-  };
 
   # bootloader
   boot.loader.systemd-boot.enable = true;

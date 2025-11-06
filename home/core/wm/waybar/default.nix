@@ -13,7 +13,7 @@
         height = 40;
 
         modules-left = [
-          "wlr/workspaces"
+          "hyprland/workspaces"
           "wlr/taskbar"
         ];
 
@@ -54,7 +54,7 @@
           escape = true;
         };
 
-        "wlr/workspaces" = {
+        "hyprland/workspaces" = {
           disable-scroll = true;
           all-outputs = false;
           disable-markup = false;

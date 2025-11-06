@@ -23,10 +23,6 @@
 
     settings = {
 
-      exec-once = [
-        "caelestia shell lock lock"
-      ]; 
-
       "$mainMod" = "SUPER";
       "$terminal" = "wezterm";
       "$browser" = "firefox";
@@ -39,8 +35,8 @@
 
       bind = [
         # Caelestia Shell
-        "$mainMod, SUPER_L, exec, caelestia shell drawers toggle launcher"
-        "$mainMod, L, exec, caelestia shell lock lock"
+        "$mainMod, SUPER_L, exec, $menu"
+        "$mainMod, L, exec, hyprlock"
 
         "$mainMod, RETURN, exec, $terminal"
         "$mainMod, B, exec, $browser"
@@ -107,8 +103,8 @@
         gaps_in = 5;
         gaps_out = 20;
         border_size = 2;
-        "col.active_border" = "rgb(8fbcbb)";
-        "col.inactive_border" = "rgb(3b4252)";
+        # "col.active_border" = "rgb(8fbcbb)";
+        # "col.inactive_border" = "rgb(3b4252)";
         resize_on_border = true;
         allow_tearing = false;
         layout = "dwindle";

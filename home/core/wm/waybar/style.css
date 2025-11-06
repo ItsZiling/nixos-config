@@ -35,8 +35,8 @@ window#waybar {
 }
 
 #workspaces button.focused {
-    border-top: 3px solid #7aa2f7;
-    border-bottom: 3px solid #7aa2f7;
+    border-top: 3px solid #ee3232;
+    border-bottom: 3px solid #ee3232;
 }
 
 #workspaces button.urgent {
@@ -56,10 +56,6 @@ window#waybar {
 }
 #workspaces button.focused:hover {
     color: #bb9af7;
-}
-
-#pulseaudio {
-    
 }
 
 #custom-recorder {

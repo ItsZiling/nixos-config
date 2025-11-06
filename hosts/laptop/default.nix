@@ -16,6 +16,7 @@
     ./hardware-configuration.nix
     ./../core
     ./../steam.nix
+    ./../stylix.nix
   ];
 
   services.logind = {

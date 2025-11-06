@@ -1,6 +1,6 @@
 { 
   imports = [ 
-    ./fht
+    #./fht
     ./wofi.nix
     ./swaync.nix
     ./waybar
