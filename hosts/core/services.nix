@@ -38,7 +38,7 @@
   #   };
   # };
 
-  services.xserver.displayManager.gdm.enable = true;
+  services.displayManager.gdm.enable = true;
   # I need sounds
   services.pipewire = {
     enable = true;
