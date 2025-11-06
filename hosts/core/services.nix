@@ -38,7 +38,6 @@
     };
   };
 
-  
   # I need sounds
   services.pipewire = {
     enable = true;
@@ -48,6 +47,13 @@
     wireplumber.enable = true;
     jack.enable = true;
 
+  };
+
+  # Security is good
+  security = {
+    polkit.enable = true;
+    pam.services.hyprlock = { };
+    pam.servces.swaylock = { };
   };
 
 }

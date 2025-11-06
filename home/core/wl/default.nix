@@ -1,7 +1,0 @@
-{ 
-  imports = [ 
-    ./fht
-    ./swayidle
-    ./swaylock
-  ];
-}
