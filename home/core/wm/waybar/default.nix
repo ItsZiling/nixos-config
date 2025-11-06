@@ -79,7 +79,7 @@
         };
 
         "wlr/taskbar" = {
-          max-length = 30;
+          max-length = 10;
           tooltip = false;
           # format = "({})";
         };
