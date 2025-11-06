@@ -2,6 +2,7 @@
   inputs,
   config,
   pkgs,
+  lib,
   ...
 }:
 
@@ -28,6 +29,7 @@
     zip
     unzip
     xrandr
+    gtklock
   ];
 
   # programs to be enable across all hosts
@@ -44,7 +46,7 @@
 
   security = {
     polkit.enable = true;
-    pam.services.hyprlock = { };
+    pam.services.gtklock.text = lib.readFile "${pkgs.gtklock}/etc/pam.d/gtklock";
   };
 
   xdg.portal = {

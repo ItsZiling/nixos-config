@@ -36,7 +36,7 @@
       bind = [
         # Caelestia Shell
         "$mainMod, SUPER_L, exec, $menu"
-        "$mainMod, L, exec, hyprlock"
+        "$mainMod, L, exec, gtklock"
 
         "$mainMod, RETURN, exec, $terminal"
         "$mainMod, B, exec, $browser"
