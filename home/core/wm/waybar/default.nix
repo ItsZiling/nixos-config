@@ -54,7 +54,7 @@
           escape = true;
         };
 
-        "hyprland/workspaces" = {
+        "ext/workspaces" = {
           disable-scroll = true;
           all-outputs = false;
           disable-markup = false;
@@ -79,9 +79,9 @@
         };
 
         "wlr/taskbar" = {
-          max-length = 60;
+          max-length = 30;
           tooltip = false;
-          # "format": "( {} )"
+          # format = "({})";
         };
 
         clock = {
