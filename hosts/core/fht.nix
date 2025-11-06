@@ -1,5 +1,7 @@
 {
   inputs,
+  pkgs,
+  config,
   ...
 }:
 
@@ -8,7 +10,7 @@
   imports = [ inputs.fht-compositor.nixosModules.default ];
 
   programs = {
-    dconf.enable = true; 
+    dconf.enable = true;
     fht-compositor.enable = true;
   };
 }
