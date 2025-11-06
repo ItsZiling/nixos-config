@@ -7,7 +7,7 @@
         command = "gtklock";
       }
       { 
-        timeout = 900; 
+        timeout = 600; 
         command = "systemctl suspend";
       }
     ];
