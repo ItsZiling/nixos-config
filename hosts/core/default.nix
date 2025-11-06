@@ -11,6 +11,7 @@
   imports = [
     ./services.nix
     ./font.nix
+    ./fht.nix
   ];
 
   # clean system
@@ -36,7 +37,6 @@
   programs = {
     zsh.enable = true;
     hyprland.enable = true;
-    dconf.enable = true;
   };
 
   hardware = {
@@ -51,6 +51,8 @@
 
   xdg.portal = {
     enable = true;
+    xdgOpenUsePortal = true; 
+    config.common.default = ["gtk"];
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
       pkgs.xdg-desktop-portal-hyprland

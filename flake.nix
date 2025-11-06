@@ -10,6 +10,11 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
 
+    fht-compositor = { 
+      url = "github:nferhat/fht-compositor";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
