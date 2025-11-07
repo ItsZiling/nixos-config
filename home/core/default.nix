@@ -1,6 +1,6 @@
 {
   imports = [
-    ./hypr
+    # ./hypr
     ./xdg.nix
     #./caelestia.nix
     ./wm
