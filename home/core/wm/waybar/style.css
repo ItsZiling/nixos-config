@@ -32,7 +32,6 @@ taskbar#waybar {
 
 #workspaces button.visible {
     color: #ee3232;
-    border-color: #ee3232
 }
 
 #workspaces button.focused {

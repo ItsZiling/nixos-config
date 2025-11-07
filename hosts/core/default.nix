@@ -37,6 +37,7 @@
   programs = {
     zsh.enable = true;
     hyprland.enable = true;
+    thunar.enable = true;
   };
 
   hardware = {
