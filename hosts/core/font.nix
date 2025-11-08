@@ -6,7 +6,7 @@
 
 {
   fonts.packages = with pkgs; [
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     noto-fonts-cjk-sans
     font-awesome
     jetbrains-mono
